@@ -1,7 +1,7 @@
 -module(fiNum).
 -export([fi/1]).
 fi(N) when is_integer(N), N>=0 -> fi(N, 0, 0, 0);
-fi(N) -> throw("Not calculatable").
+fi(_) -> throw("Not calculatable").
 
 fi(N, N, _, Output) -> Output; % End clause return output
 fi(N, 0, _, _) -> fi(N, 1, 0, 1); % Check if N = 0
