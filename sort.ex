@@ -1,6 +1,5 @@
 defmodule Sort do
-    def quicksort(list) when length(list) > 1 do
-        pivot = hd(list)
+    def quicksort(list=[pivot|tail]) when length(list) > 1 do
         large_list = Enum.filter(list, fn x -> x > pivot end)
         small_list = Enum.filter(list, fn x -> x < pivot end)
         pivot_list = Enum.filter(list, fn x -> x == pivot end)
